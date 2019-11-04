@@ -33,12 +33,12 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-  var funcTwoArray = [];
+  var funcTwoArr = [];
   var mulAnswer = a * b;
-  funcTwoArray[0] = mulAnswer;
+  funcTwoArr[0] = mulAnswer;
   var result = `The product of ${a} and ${b} is ${mulAnswer}.`;
-  funcTwoArray[1] = result;
-  return funcTwoArray;
+  funcTwoArr[1] = result;
+  return funcTwoArr;
 }
 
 // Here is the test for multiply(); uncomment it to run it
