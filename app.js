@@ -60,21 +60,21 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
   var funcThreeArr = [];
-  var sumAB = sum(a, b);
-  var sumABC = sum(sumAB, c);
+  var sumAB = sum(a, b)[0];
+  var sumABC = sum(sumAB, c)[0];
   funcThreeArr[0] = sumABC;
-  var mulAB = multiply(a, b);
-  var mulABC = multiply(mulAB, c);
+  var mulAB = multiply(a, b)[0];
+  var mulABC = multiply(mulAB, c)[0];
   funcThreeArr[1] = mulABC;
-  var result1 = `${a} and ${b} and ${c} sum to ${sumABC}.`
+  var result1 = `${a} and ${b} and ${c} sum to ${sumABC}.`;
   funcThreeArr[2] = result1;
-  var result2 = `The product of ${a} and ${b}`
-
+  var result2 = `The product of ${a} and ${b} and ${c} is ${mulABC}.`;
+  funcThreeArr[3] = result2;
   return funcThreeArr;
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4, 7, 5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
