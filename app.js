@@ -152,17 +152,25 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 var testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
-function multiplyAnyArray() { //eslint-disable-line
+function multiplyAnyArray(dynamicArray) { //eslint-disable-line
   var funcSixArr = [];
-  var j = 0;
-  var sum = 0;
-  for (var i = 0; i < testDynamicArray.length; i++) {
-    sum = sum(sum, testDynamicArray[i])[0];
+  var mult = 1;
+  for (var i = 0; i < dynamicArray.length; i++) {
+    mult = multiply(mult, dynamicArray[i])[0];
   }
-  funcSixArr[0] = sum;
+  funcSixArr[0] = mult;
   var result = 'The numbers ';
-  for (var i = 0; i < )
-  
+  for (var i = 0; i < dynamicArray.length; i++) {
+    result = result + `${dynamicArray[i]}`;
+    console.log(result);
+    if (i < dynamicArray.length - 1) {
+      result = result + ',';
+    }
+  }
+  result = result + ` have a product of ${funcSixArr[0]}.`;
+  funcSixArr[1] = result;
+  console.log(funcSixArr);
+  return funcSixArr;
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
