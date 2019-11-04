@@ -90,9 +90,15 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 var testArray = [2, 3, 4]; //eslint-disable-line
-
+// sumArr
 function sumArray(sumArr) { //eslint-disable-line
-
+  var funcFourArr = [];
+  var sumAB = sum(sumArr[0], sumArr[1])[0];
+  var sumABC = sum(sumAB, sumArr[2])[0];
+  funcFourArr[0] = sumABC;
+  var result = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sumABC} is their sum.`;
+  funcFourArr[1] = result;
+  return funcFourArr;
 }
 
 // Here is the test for sumArray(); uncomment it to run it
