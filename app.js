@@ -59,7 +59,18 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+  var funcThreeArr = [];
+  var sumAB = sum(a, b);
+  var sumABC = sum(sumAB, c);
+  funcThreeArr[0] = sumABC;
+  var mulAB = multiply(a, b);
+  var mulABC = multiply(mulAB, c);
+  funcThreeArr[1] = mulABC;
+  var result1 = `${a} and ${b} and ${c} sum to ${sumABC}.`
+  funcThreeArr[2] = result1;
+  var result2 = `The product of ${a} and ${b}`
 
+  return funcThreeArr;
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
